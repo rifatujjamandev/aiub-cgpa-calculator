@@ -1,0 +1,97 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>AIUB CGPA Calculator — Where Leaders Are Created</title>
+  <meta name="description" content="Official-inspired CGPA & GPA calculators aligned with AIUB grading regulations."/>
+  <link rel="icon" href="assets/img/aiub-logo.jpg"/>
+  <link rel="stylesheet" href="assets/css/main.css"/>
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#">
+        <img src="assets/img/aiub-logo.jpg" alt="AIUB Logo"/>
+        <div>
+          <div class="title">American International University–Bangladesh</div>
+          <span class="subtitle">Where Leaders Are Created</span>
+        </div>
+      </a>
+      <div class="actions">
+        <span class="theme-toggle">
+          <button class="btn" type="button" onclick="toggleTheme()">
+            🌓 <span id="themeLabel" style="margin-left:6px">Toggle</span>
+          </button>
+        </span>
+        <a class="btn" href="https://www.aiub.edu" target="_blank" rel="noopener">AIUB</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="badge">Aligned with AIUB Regulations</span>
+        <h1>Professional CGPA & GPA Calculators</h1>
+        <p>Built with the official AIUB grading system (4.00 scale) and a clean, responsive UI. Choose a calculator to get started.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="grid">
+        <div class="col-6">
+          <div class="card">
+            <h2>Simple CGPA Calculator</h2>
+            <p>Enter course grades (letter or percentage) with credits. We convert using AIUB's official scale and compute your CGPA.</p>
+            <a class="btn primary" href="simple.html">Open Simple Calculator</a>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <h2>Weighted (Semester-wise) Calculator</h2>
+            <p>Compute each semester GPA and overall CGPA weighted by semester credits—exactly as per AIUB's computation method.</p>
+            <a class="btn primary" href="weighted.html">Open Weighted Calculator</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid" style="margin-top:20px">
+        <div class="col-12">
+          <div class="card">
+            <h3 style="margin-top:0">AIUB Grading System (4.00 Scale)</h3>
+            <div style="overflow:auto">
+              <table class="table">
+                <thead><tr><th>Numerical %</th><th>Letter</th><th>Point</th></tr></thead>
+                <tbody>
+                  <tr><td>90–100</td><td>A+</td><td>4.00</td></tr>
+                  <tr><td>85–&lt; 90</td><td>A</td><td>3.75</td></tr>
+                  <tr><td>80–&lt; 85</td><td>B+</td><td>3.50</td></tr>
+                  <tr><td>75–&lt; 80</td><td>B</td><td>3.25</td></tr>
+                  <tr><td>70–&lt; 75</td><td>C+</td><td>3.00</td></tr>
+                  <tr><td>65–&lt; 70</td><td>C</td><td>2.75</td></tr>
+                  <tr><td>60–&lt; 65</td><td>D+</td><td>2.50</td></tr>
+                  <tr><td>50–&lt; 60</td><td>D</td><td>2.25</td></tr>
+                  <tr><td>&lt; 50</td><td>F</td><td>0.00</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="muted">Source: AIUB Academic Regulations — Grading System & Computation of CGPA.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div>© 2025 AIUB CGPA Calculator (Unofficial). For reference and personal use.</div>
+      <div>Made with ♥︎</div>
+    </div>
+  </footer>
+
+  <script src="assets/js/aiub-grading.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

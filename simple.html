@@ -1,0 +1,71 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Simple CGPA Calculator — AIUB</title>
+  <link rel="icon" href="assets/img/aiub-logo.jpg"/>
+  <link rel="stylesheet" href="assets/css/main.css"/>
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <img src="assets/img/aiub-logo.jpg" alt="AIUB Logo"/>
+        <div>
+          <div class="title">AIUB — Simple CGPA</div>
+          <span class="subtitle">Aligned with AIUB Grading</span>
+        </div>
+      </a>
+      <div class="actions">
+        <span class="theme-toggle"><button class="btn" type="button" onclick="toggleTheme()">🌓 <span id="themeLabel" style="margin-left:6px">Toggle</span></button></span>
+        <a class="btn" href="index.html">Home</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding:24px 0">
+    <div class="card">
+      <h2 style="margin-top:0">Courses</h2>
+      <table id="courses" class="table">
+        <thead><tr><th>Course</th><th>% (optional)</th><th>Letter</th><th>Grade Point</th><th>Credit</th><th></th></tr></thead>
+        <tbody></tbody>
+      </table>
+      <div style="display:flex; gap:10px; margin-top:12px; flex-wrap:wrap">
+        <button class="btn" type="button" onclick="addRow()">+ Add Course</button>
+        <button class="btn" type="button" onclick="recalc()">Recalculate</button>
+        <button class="btn" type="button" onclick="clearAll()">Clear</button>
+        <button class="btn" type="button" onclick="downloadCSV()">Download CSV</button>
+      </div>
+    </div>
+
+    <div class="grid" style="margin-top:20px">
+      <div class="col-6">
+        <div class="card">
+          <h3 style="margin-top:0">Results</h3>
+          <div class="kpis">
+            <div class="kpi"><div class="value" id="cgpa">0.00</div><div class="label">CGPA</div></div>
+            <div class="kpi"><div class="value" id="credits">0.00</div><div class="label">Total Credits</div></div>
+            <div class="kpi"><div class="value" id="points">0.00</div><div class="label">Total Points</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="card">
+          <h3 style="margin-top:0">AIUB Grading (4.00)</h3>
+          <p style="margin:0">We automatically map your % to letter and point.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2025 — Uses AIUB Grading System (4.00 scale).</div>
+  </footer>
+
+  <script src="assets/js/aiub-grading.js"></script>
+  <script src="assets/js/simple.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

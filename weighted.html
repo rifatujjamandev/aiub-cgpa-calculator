@@ -1,0 +1,69 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Weighted (Semester-wise) Calculator — AIUB</title>
+  <link rel="icon" href="assets/img/aiub-logo.jpg"/>
+  <link rel="stylesheet" href="assets/css/main.css"/>
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <img src="assets/img/aiub-logo.jpg" alt="AIUB Logo"/>
+        <div>
+          <div class="title">AIUB — Weighted Calculator</div>
+          <span class="subtitle">Semester GPA & Overall CGPA</span>
+        </div>
+      </a>
+      <div class="actions">
+        <span class="theme-toggle"><button class="btn" type="button" onclick="toggleTheme()">🌓 <span id="themeLabel" style="margin-left:6px">Toggle</span></button></span>
+        <a class="btn" href="index.html">Home</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding:24px 0">
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+        <h2 style="margin:0">Semesters</h2>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn" onclick="addSemester()">+ Add Semester</button>
+          <button class="btn" onclick="recalcAll()">Recalculate</button>
+          <button class="btn" onclick="downloadCSV()">Download CSV</button>
+        </div>
+      </div>
+      <div id="semesters" style="display:flex;flex-direction:column;gap:16px;margin-top:12px"></div>
+    </div>
+
+    <div class="grid" style="margin-top:20px">
+      <div class="col-6">
+        <div class="card">
+          <h3 style="margin-top:0">Overall</h3>
+          <div class="kpis">
+            <div class="kpi"><div class="value" id="overallCgpa">0.00</div><div class="label">CGPA</div></div>
+            <div class="kpi"><div class="value" id="overallCredits">0.00</div><div class="label">Total Credits</div></div>
+            <div class="kpi"><div class="value" id="overallPoints">0.00</div><div class="label">Total Points</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="card">
+          <h3 style="margin-top:0">Rule</h3>
+          <p style="margin:0">Overall CGPA = Σ(Semester GPA × Semester Credits) ÷ Σ(Semester Credits)</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2025 — Computation follows AIUB rules.</div>
+  </footer>
+
+  <script src="assets/js/aiub-grading.js"></script>
+  <script src="assets/js/weighted.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
